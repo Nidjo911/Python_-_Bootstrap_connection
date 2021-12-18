@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} {{ user.name }} {% endblock %}
+
+{% block content %}
+
+<h3> {{ user.name }}</h3>
+
+<p>Email: {{ user.email }}</p>
+
+
+
+
+<!--sljedeci dio koda odnosi se na izbrisane korisnike:-->
+
+{% if user.deleted %}
+
+<!--Mogu ovaj dio formatirati i kao UPOZORENJA ili crvenim slovima...-->
+
+<h1>Korisnik je izbrisan!</h1>
+
+{% endif %}
+
+<!--kraj koda za izbrisane korisnike-->
+
+{% endblock content %}

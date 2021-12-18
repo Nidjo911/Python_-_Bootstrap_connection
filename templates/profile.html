@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<p><strong>Tvoje ime: </strong> {{ user.name }}</p>
+
+<p><strong>Tvoj email: </strong> {{ user.email }}</p>
+
+<p><a href="/profile/edit">Edit profile</a></p>
+<p><a href="/profile/delete">delete profile</a></p>
+
+
+{% endblock content %}

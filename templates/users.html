@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Lista{% endblock %}
+
+{% block content %}
+<h3>Korisnici: </h3>
+
+<ul>
+    {% for x in users %}
+        <li><a href="/user/{{ x.id }}">{{ x.name }}</a></li>
+    {% endfor %}
+</ul>
+
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<h3>Izmjeni profil</h3>
+
+<form action="/profile/edit" method="post">
+
+    <p>
+        <strong>Tvoje ime:</strong>
+        <input type="text" value="{{ user.name }}" name="profile-name">
+
+    </p>
+
+    <p>
+        <strong>Tvoj email:</strong>
+        <input type="email" value="{{ user.email }}" name="profile-email">
+
+    </p>
+
+    <h5>Promjena lozinke (ako zelite):</h5>
+
+    <p>Za promjenu lozinke, unesite staru lozinku ispod:</p>
+
+    <p><strong>Stara lozinka:</strong>
+        <input type="password" name="stara-lozinka">
+    </p>
+
+    <p><strong>Nova lozinka:</strong>
+        <input type="password" name="nova-lozinka">
+    </p>
+
+
+    <button>Submit</button>
+
+</form>
+
+{% endblock content %}
